@@ -49,3 +49,6 @@
       DOCKER_API_VERSION: "{{ grid_router_docker_api_version }}"
     ports:
     - "{{ grid_router_port }}:4444"
+    
+ - name: Reload GGR
+   shell: "docker kill -s HUP ggr"
