@@ -50,5 +50,5 @@
     ports:
     - "{{ grid_router_port }}:4444"
     
- - name: Reload GGR
-   shell: "docker kill -s HUP ggr"
+- name: Reload GGR
+  shell: "docker kill -s HUP ggr"
