@@ -14,7 +14,7 @@
 	}
   },
   "quota": {
-    "selenoid": {
+    "{{ grid_router_qouta_user }}": {
       {% for browser in grid_router_browsers -%}
          "{{ browser.name }}": {
             "defaultVersion": "{{ browser.defaultVersion }}",
