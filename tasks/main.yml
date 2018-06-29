@@ -47,8 +47,7 @@
     env:
       TZ: "{{ grid_router_time_zone }}"
       DOCKER_API_VERSION: "{{ grid_router_docker_api_version }}"
-    ports:
-    - "{{ grid_router_port }}:4444"
+    command: -listen :"{{ grid_router_port }}"
     
 - name: Reload GGR
   shell: "docker kill -s HUP grid_router"
